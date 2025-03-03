@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   labels:
-    app: vote
+    app: vote-staging
     tier: front
   name: vote-blue-green
   namespace: staging
@@ -10,7 +10,7 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: vote
+      app: vote-staging
   strategy:
     blueGreen:
       autoPromotionEnabled: false
@@ -19,12 +19,12 @@ spec:
   template:
     metadata:
       labels:
-        app: vote
+        app: vote-staging
         tier: front
     spec:
       containers:
       - image: schoolofdevops/vote:v7
-        name: vote
+        name: vote-staging
         imagePullPolicy: Always
         resources:
           requests:
