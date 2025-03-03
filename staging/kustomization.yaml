@@ -4,6 +4,7 @@ resources:
 - ../base
 commonAnnotations:
   supported-by: sre@example.com
+namespace: staging
 labels:
 - includeSelectors: false
   pairs:
