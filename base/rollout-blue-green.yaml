@@ -14,7 +14,7 @@ spec:
   strategy:
     blueGreen:
       autoPromotionEnabled: false
-      activeService: vote
+      activeService: vote-staging
       previewService: vote-preview
   template:
     metadata:
