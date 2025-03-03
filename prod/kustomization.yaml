@@ -10,3 +10,4 @@ labels:
     project: instavote
 patches:
 - path: service.yaml
+- path: preview-service.yaml

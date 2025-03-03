@@ -1,7 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- deployment.yaml
+- rollout-blue-green.yaml
+- rollout-canary.yaml
 - service.yaml
-- ingress.yml
 - preview-service.yaml
+- ingress.yml
+- ingress-prod.yml

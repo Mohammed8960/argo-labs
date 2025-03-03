@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: vote-ingress
-  namespace: staging
+  name: vote-ingress-prod
+  namespace: prod
 spec:
   ingressClassName: nginx
   rules:
-    - host: techgur.fun
+    - host: prod.techgur.fun
       http:
         paths:
           - path: /
@@ -16,7 +16,7 @@ spec:
                 name: vote
                 port:
                   number: 80
-    - host: preview.techgur.fun
+    - host: prod-preview.techgur.fun
       http:
         paths:
           - path: /
