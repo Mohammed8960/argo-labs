@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: vote
+    app: vote-staging
     tier: front
-  name: vote
+  name: vote-staging
 spec:
   ports:
   - name: "80"
@@ -12,5 +12,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: vote
+    app: vote-staging
   type: ClusterIP
